@@ -1,4 +1,4 @@
-time,city,accumulated_confirmed,accumulated_death,accumulated_recovered,new_confirmed,new_death,new_recovered 
+time,city,accumulated_confirmed,accumulated_death,accumulated_recovered,new_confirmed,new_death,new_recovered
 2020-01-10,武汉,41,1,2,41,1,2
 2020-01-11,武汉,41,1,6,0,0,4
 2020-01-12,武汉,41,1,7,0,0,1

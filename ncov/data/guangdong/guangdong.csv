@@ -1,4 +1,4 @@
-time,city,accumulated_confirmed,accumulated_death,accumulated_recovered,new_confirmed,new_death,new_recovered 
+time,city,accumulated_confirmed,accumulated_death,accumulated_recovered,new_confirmed,new_death,new_recovered
 2020-01-21,广州,2,0,0,2,0,0
 2020-01-21,深圳,4,0,0,14,0,0
 2020-01-21,珠海,4,0,0,0,0,0

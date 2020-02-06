@@ -7,19 +7,25 @@ from pathlib import Path
 str_province = ['湖北', '广东']
 
 
-def get_data(province='湖北',
-             city='武汉',
+def get_data(province='',
+             city='',
              start_date='2020-01-10',
              end_date='2020-02-03'):
-    assert province in str_province
-    if province == str_province[0]:
+    if province == '':
+        file = f'{Path().resolve()}/ncov/data/nation/nation.csv'
+    elif province == str_province[0]:
         file = f'{Path().resolve()}/ncov/data/hubei/hubei.csv'
-    else:
+    elif province == str_province[1]:
         file = f'{Path().resolve()}/ncov/data/guangdong/guangdong.csv'
+    else:
+        print("No province match")
+        return
     data = pds.read_csv(file, parse_dates=['time'])
-    assert city in data['city'].unique()
-    data = data[data['city'] == city]
+    if city != '':
+        assert city in data['city'].unique()
+        data = data[data['city'] == city]
     start_date = datetime.strptime(start_date, '%Y-%m-%d')
     end_date = datetime.strptime(end_date, '%Y-%m-%d')
     data = data[(start_date <= data['time']) & (data['time'] <= end_date)]
-    return data.reset_index(drop=True)
+    data = data.reset_index(drop=True)
+    return data
