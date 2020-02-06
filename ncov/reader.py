@@ -5,6 +5,21 @@ from datetime import datetime
 from pathlib import Path
 
 str_province = ['湖北', '广东']
+cols = [
+    'time',
+    'city',
+    'new_confirmed',
+    'new_death',
+    'new_recovered',
+    'accumulated_confirmed',
+    'accumulated_death',
+    'accumulated_recovered',
+    'new_suspected',
+    'accumulated_suspected',
+    'accumulated_close_contact',
+    'accumulated_quit_medical_observation',
+    'under_medical_observation',
+]
 
 
 def get_data(province='',
@@ -28,4 +43,8 @@ def get_data(province='',
     end_date = datetime.strptime(end_date, '%Y-%m-%d')
     data = data[(start_date <= data['time']) & (data['time'] <= end_date)]
     data = data.reset_index(drop=True)
+    for col in cols:
+        if col not in data.columns:
+            data[col] = None
+    data = data[cols]
     return data
