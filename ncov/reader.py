@@ -28,13 +28,15 @@ def get_data(province='',
              end_date='2020-02-03'):
     if province == '':
         file = f'{Path().resolve()}/ncov/data/nation/nation.csv'
+    elif city == '':
+        file = f'{Path().resolve()}/ncov/data/nation/allcity.csv'
+        city = '全省'
     elif province == str_province[0]:
         file = f'{Path().resolve()}/ncov/data/hubei/hubei.csv'
     elif province == str_province[1]:
         file = f'{Path().resolve()}/ncov/data/guangdong/guangdong.csv'
     else:
-        print("No province match")
-        return
+        file = f'{Path().resolve()}/ncov/data/nation/allcity.csv'
     data = pds.read_csv(file, parse_dates=['time'])
     if city != '':
         assert city in data['city'].unique()
@@ -48,3 +50,47 @@ def get_data(province='',
             data[col] = None
     data = data[cols]
     return data
+
+
+def watch_data(province='',
+               city='',
+               start_date='2020-01-10',
+               end_date='2020-02-05'):
+    if province == '':
+        file = f'{Path().resolve()}/ncov/data/nation/nation.csv'
+    elif city == '':
+        file = f'{Path().resolve()}/ncov/data/nation/allcity.csv'
+        city = '全省'
+    else:
+        file = f'{Path().resolve()}/ncov/data/nation/allcity.csv'
+    data = pds.read_csv(file, parse_dates=['time'])
+    data = data[(data['province'] == province) & (data['city'] == city)]
+    plt.xticks(pds.date_range(start_date, end_date), rotation=90)
+    start_date = datetime.strptime(start_date, '%Y-%m-%d')
+    end_date = datetime.strptime(end_date, '%Y-%m-%d')
+    data = data[(start_date <= data['time']) & (data['time'] <= end_date)]
+    data = data.reset_index(drop=True)
+    plt.plot(data['time'],
+             data['accumulated_death'],
+             color='red',
+             marker='.',
+             label="death")
+    plt.plot(data['time'],
+             data['accumulated_confirmed'],
+             color='yellow',
+             marker='.',
+             label="confirmed")
+    plt.plot(data['time'],
+             data['accumulated_suspected'],
+             color='blue',
+             marker='.',
+             label="suspected")
+    plt.plot(data['time'],
+             data['accumulated_recovered'],
+             color='green',
+             marker='.',
+             label="recovered")
+    plt.xlabel("day")
+    plt.ylabel("number")
+    plt.legend()
+    plt.show()
