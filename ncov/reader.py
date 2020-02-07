@@ -65,27 +65,27 @@ def watch_data(province='',
         file = f'{Path().resolve()}/ncov/data/nation/allcity.csv'
     data = pds.read_csv(file, parse_dates=['time'])
     data = data[(data['province'] == province) & (data['city'] == city)]
-    plt.xticks(pds.date_range(start_date, end_date), rotation=90)
+    plt.xticks(rotation=90)
     start_date = datetime.strptime(start_date, '%Y-%m-%d')
     end_date = datetime.strptime(end_date, '%Y-%m-%d')
     data = data[(start_date <= data['time']) & (data['time'] <= end_date)]
     data = data.reset_index(drop=True)
-    plt.plot(data['time'],
+    plt.plot(data['time'].values,
              data['accumulated_death'],
              color='red',
              marker='.',
              label="death")
-    plt.plot(data['time'],
+    plt.plot(data['time'].values,
              data['accumulated_confirmed'],
              color='yellow',
              marker='.',
              label="confirmed")
-    plt.plot(data['time'],
+    plt.plot(data['time'].values,
              data['accumulated_suspected'],
              color='blue',
              marker='.',
              label="suspected")
-    plt.plot(data['time'],
+    plt.plot(data['time'].values,
              data['accumulated_recovered'],
              color='green',
              marker='.',
@@ -94,3 +94,4 @@ def watch_data(province='',
     plt.ylabel("number")
     plt.legend()
     plt.show()
+    return data
