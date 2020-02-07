@@ -15,3 +15,6 @@
 ### new_confirmed 新增确诊人数
 ### new_death 新增死亡人数
 ### new_recovered 新增痊愈人数
+## watch_data(province='', city='', start_date='2020-01-10', end_date='2020-02-03')
+### 增加数据查看功能
+### 输入省、市、时间，打印这段时间内观察、确诊、死亡、痊愈的人数曲线
