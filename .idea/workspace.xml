@@ -3,22 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c589bb98-fe88-4e6c-9a46-54b48dede757" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nCov-Crawler_v1.0.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ncov/CrawlAllCityHistory.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ncov/data/guangdong/guangdong_data0208.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ncov/data/guangdong/shenzhen_0208.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ncov/data/hubei/hubei_city.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ncov/data/merge.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ncov/data/nation/allcity.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ncov/data/nation/allcity_20200208.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ncov/data/nation/allcity_20200209.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ncov/data/nation/nation.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ncov/data/nation_data.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ncov/data_processing.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ncov/history/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ncov/history/_city.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ncov/history/city.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ncov/history/merge.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +40,11 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\2019nCov\ncov\data" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projects\2019nCov\ncov" />
       <recent name="D:\projects\test\ncov" />
       <recent name="D:\projects\test\ncov\data\nation" />
       <recent name="D:\projects\test\2019n-cov\ncov\data\nation" />
@@ -143,7 +131,7 @@
       <workItem from="1581170105139" duration="1644000" />
       <workItem from="1581219468817" duration="7366000" />
       <workItem from="1581256866308" duration="648000" />
-      <workItem from="1581303236652" duration="2507000" />
+      <workItem from="1581303236652" duration="3248000" />
     </task>
     <task id="LOCAL-00001" summary="update allcity_20200208.csv">
       <created>1581220676407</created>
