@@ -1,4 +1,4 @@
-provinceid,provincename,cityid,cityname,confirmed,suspected,dead,cured,time
+provinceid,province,cityid,city,accumulated_confirmed,accumulated_suspected,accumulated_dead,accumulated_cured,time
 14,湖北,14,全省,45,0,2,0,2020/01/16
 14,湖北,14,全省,62,0,2,0,2020/01/17
 14,湖北,14,全省,121,0,3,0,2020/01/18
