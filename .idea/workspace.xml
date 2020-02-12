@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c589bb98-fe88-4e6c-9a46-54b48dede757" name="Default Changelist" comment="" />
+    <list default="true" id="c589bb98-fe88-4e6c-9a46-54b48dede757" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,15 +40,15 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\2019nCov\ncov\data" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\projects\2019nCov\ncov\data" />
       <recent name="D:\projects\2019nCov\ncov" />
       <recent name="D:\projects\test\ncov" />
       <recent name="D:\projects\test\ncov\data\nation" />
       <recent name="D:\projects\test\2019n-cov\ncov\data\nation" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\projects\2019nCov\ncov\data" />
     </key>
   </component>
   <component name="RunManager" selected="Python.CrawlAllCityHistory">
@@ -132,7 +134,7 @@
       <workItem from="1581256866308" duration="648000" />
       <workItem from="1581303236652" duration="5066000" />
       <workItem from="1581387187052" duration="4326000" />
-      <workItem from="1581487510001" duration="864000" />
+      <workItem from="1581487510001" duration="2178000" />
     </task>
     <task id="LOCAL-00001" summary="update allcity_20200208.csv">
       <created>1581220676407</created>
