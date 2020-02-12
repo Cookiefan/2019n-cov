@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c589bb98-fe88-4e6c-9a46-54b48dede757" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ncov/data/guangdong_截至0209_24时.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ncov/data/guangdong_截至0209_24时.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ncov/data/hubei_截至0209_24时i.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ncov/data/nation_截至0209_24时.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ncov/data/nation_截至0209_24时.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ncov/data/wuhan_截至0209_24时.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ncov/data/wuhan_截至0209_24时.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +133,7 @@
       <workItem from="1581219468817" duration="7366000" />
       <workItem from="1581256866308" duration="648000" />
       <workItem from="1581303236652" duration="5066000" />
-      <workItem from="1581387187052" duration="2832000" />
+      <workItem from="1581387187052" duration="4326000" />
     </task>
     <task id="LOCAL-00001" summary="update allcity_20200208.csv">
       <created>1581220676407</created>
