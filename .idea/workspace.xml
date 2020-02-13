@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c589bb98-fe88-4e6c-9a46-54b48dede757" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c589bb98-fe88-4e6c-9a46-54b48dede757" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -136,7 +134,7 @@
       <workItem from="1581387187052" duration="4326000" />
       <workItem from="1581487510001" duration="2178000" />
       <workItem from="1581511480339" duration="1394000" />
-      <workItem from="1581570870376" duration="3162000" />
+      <workItem from="1581570870376" duration="3284000" />
     </task>
     <task id="LOCAL-00001" summary="update allcity_20200208.csv">
       <created>1581220676407</created>
