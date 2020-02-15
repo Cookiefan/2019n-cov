@@ -4,92 +4,52 @@ from matplotlib import pyplot as plt
 from datetime import datetime
 from pathlib import Path
 
-str_province = ['湖北', '广东']
-cols = [
-    'time',
-    'city',
-    'new_confirmed',
-    'new_death',
-    'new_recovered',
-    'accumulated_confirmed',
-    'accumulated_death',
-    'accumulated_recovered',
-    'new_suspected',
-    'accumulated_suspected',
-    'accumulated_close_contact',
-    'accumulated_quit_medical_observation',
-    'under_medical_observation',
-]
 
-
-def get_data(province='',
-             city='',
-             start_date='2020-01-10',
-             end_date='2020-02-03'):
-    if province == '':
-        file = f'{Path().resolve()}/ncov/data/nation/nation.csv'
-    elif city == '':
-        file = f'{Path().resolve()}/ncov/data/nation/allcity.csv'
-        city = '全省'
-    elif province == str_province[0]:
-        file = f'{Path().resolve()}/ncov/data/hubei/hubei.csv'
-    elif province == str_province[1]:
-        file = f'{Path().resolve()}/ncov/data/guangdong/guangdong.csv'
-    else:
-        file = f'{Path().resolve()}/ncov/data/nation/allcity.csv'
+def get_data(key='wuhan', start_date='2020/1/20', end_date='2020/02/11'):
+    assert key in ['guangdong', 'hubei', 'nation', 'shenzhen', 'wuhan']
+    file = f'ncov/data/key/{key}.csv'
     data = pds.read_csv(file, parse_dates=['time'])
-    if city != '':
-        assert city in data['city'].unique()
-        data = data[data['city'] == city]
-    start_date = datetime.strptime(start_date, '%Y-%m-%d')
-    end_date = datetime.strptime(end_date, '%Y-%m-%d')
+    # if city != '':
+    #     assert city in data['city'].unique()
+    #     data = data[data['city'] == city]
+    start_date = datetime.strptime(start_date, '%Y/%m/%d')
+    end_date = datetime.strptime(end_date, '%Y/%m/%d')
     data = data[(start_date <= data['time']) & (data['time'] <= end_date)]
     data = data.reset_index(drop=True)
-    for col in cols:
-        if col not in data.columns:
-            data[col] = None
-    data = data[cols]
     return data
 
 
-def watch_data(province='',
-               city='',
-               start_date='2020-01-10',
-               end_date='2020-02-05'):
-    if province == '':
-        file = f'{Path().resolve()}/ncov/data/nation/nation.csv'
-    elif city == '':
-        file = f'{Path().resolve()}/ncov/data/nation/allcity.csv'
-        city = '全省'
-    else:
-        file = f'{Path().resolve()}/ncov/data/nation/allcity.csv'
+def watch_data(key='wuhan', start_date='2020/01/10', end_date='2020/02/11'):
+    assert key in ['guangdong', 'hubei', 'nation', 'shenzhen', 'wuhan']
+    file = f'ncov/data/key/{key}.csv'
     data = pds.read_csv(file, parse_dates=['time'])
-    data = data[(data['province'] == province) & (data['city'] == city)]
-    plt.xticks(rotation=90)
-    start_date = datetime.strptime(start_date, '%Y-%m-%d')
-    end_date = datetime.strptime(end_date, '%Y-%m-%d')
+    # if city != '':
+    #     assert city in data['city'].unique()
+    #     data = data[data['city'] == city]
+    start_date = datetime.strptime(start_date, '%Y/%m/%d')
+    end_date = datetime.strptime(end_date, '%Y/%m/%d')
     data = data[(start_date <= data['time']) & (data['time'] <= end_date)]
     data = data.reset_index(drop=True)
     plt.plot(data['time'].values,
-             data['accumulated_death'],
+             data['dead'],
              color='red',
              marker='.',
-             label="death")
+             label="dead")
     plt.plot(data['time'].values,
-             data['accumulated_confirmed'],
+             data['confirmed'],
              color='yellow',
              marker='.',
              label="confirmed")
     plt.plot(data['time'].values,
-             data['accumulated_suspected'],
+             data['suspected'],
              color='blue',
              marker='.',
              label="suspected")
     plt.plot(data['time'].values,
-             data['accumulated_recovered'],
+             data['cured'],
              color='green',
              marker='.',
-             label="recovered")
+             label="cured")
     plt.xlabel("day")
     plt.ylabel("number")
     plt.legend()
