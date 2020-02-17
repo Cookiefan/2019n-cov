@@ -52,7 +52,7 @@
       <recent name="D:\projects\test\2019n-cov\ncov\data\nation" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.CrawlAllCityHistory">
     <configuration name="CrawlAllCityHistory" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="test" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -141,6 +141,8 @@
       <workItem from="1581590835419" duration="3179000" />
       <workItem from="1581680864866" duration="4109000" />
       <workItem from="1581761040181" duration="2604000" />
+      <workItem from="1581854387767" duration="1012000" />
+      <workItem from="1581856296667" duration="1796000" />
     </task>
     <task id="LOCAL-00001" summary="update allcity_20200208.csv">
       <created>1581220676407</created>
@@ -180,22 +182,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="218" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581599571179" />
-    <state width="1867" height="335" key="GridCell.Tab.0.bottom" timestamp="1581854428474">
+    <state width="1867" height="335" key="GridCell.Tab.0.bottom" timestamp="1581855798463">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="335" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581854428474" />
-    <state width="1867" height="335" key="GridCell.Tab.0.center" timestamp="1581854428474">
+    <state width="1867" height="335" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581855798463" />
+    <state width="1867" height="335" key="GridCell.Tab.0.center" timestamp="1581855798463">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="335" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581854428474" />
-    <state width="1867" height="335" key="GridCell.Tab.0.left" timestamp="1581854428473">
+    <state width="1867" height="335" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581855798463" />
+    <state width="1867" height="335" key="GridCell.Tab.0.left" timestamp="1581855798463">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="335" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581854428473" />
-    <state width="1867" height="335" key="GridCell.Tab.0.right" timestamp="1581854428474">
+    <state width="1867" height="335" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581855798463" />
+    <state width="1867" height="335" key="GridCell.Tab.0.right" timestamp="1581855798463">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="335" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581854428474" />
+    <state width="1867" height="335" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581855798463" />
     <state x="522" y="90" key="SettingsEditor" timestamp="1581150700664">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
