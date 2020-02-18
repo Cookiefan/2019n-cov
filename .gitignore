@@ -1,7 +1,8 @@
-./bak
+./bak/
 *.log
 .vscode
 .idea
 */__pycache__/
-./ncov/data_bak
+./ncov/data_bak/
 *.zip
+./README.assets/
