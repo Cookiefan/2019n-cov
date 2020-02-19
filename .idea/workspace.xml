@@ -2,7 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c589bb98-fe88-4e6c-9a46-54b48dede757" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/README.assets/1582032075100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.assets/1582032305457.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.assets/1582032342411.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.assets/1582032371692.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.assets/1582032452354.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.assets/1582032529155.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.assets/1582032599624.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.assets/1582032622059.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.assets/1582032644336.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.assets/1582032665167.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.assets/README.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ncov/com_pred/china/02-16/.~submission_first.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ncov/com_pred/china/02-16/submission_first.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ncov/com_pred/china/02-17/submission_arima.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ncov/com_pred/china/02-17/submission_arima_18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ncov/com_pred/china/02-17/submission_exp_decay.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ncov/com_pred/china/02-17/submission_exp_decay_18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ncov/pred/02-17/02-17_pred.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_arima.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/model_arima.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/china/02-17/model.pt" beforeDir="false" afterPath="$PROJECT_DIR$/models/china/02-17/model.pt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/china/02-17/params/param.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/models/china/02-17/params/param.pkl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
