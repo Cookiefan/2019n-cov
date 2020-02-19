@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c589bb98-fe88-4e6c-9a46-54b48dede757" name="Default Changelist" comment="" />
+    <list default="true" id="c589bb98-fe88-4e6c-9a46-54b48dede757" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,15 +41,15 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\projects\2019nCov\ncov\data" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\projects\2019nCov\ncov\data" />
       <recent name="D:\projects\2019nCov\ncov" />
       <recent name="D:\projects\test\ncov" />
       <recent name="D:\projects\test\ncov\data\nation" />
       <recent name="D:\projects\test\2019n-cov\ncov\data\nation" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\2019nCov\ncov\data" />
     </key>
   </component>
   <component name="RunManager" selected="Python.temp">
@@ -237,7 +239,7 @@
     <state x="824" y="189" key="ftp.server.browser/0.0.1920.1040@0.0.1920.1040" timestamp="1581165178587" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/2019nCov$temp.coverage" NAME="temp Coverage Results" MODIFIED="1582025794960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ncov/data" />
+    <SUITE FILE_PATH="coverage/2019nCov$temp.coverage" NAME="temp Coverage Results" MODIFIED="1582113405757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ncov/data" />
     <SUITE FILE_PATH="coverage/test$test01.coverage" NAME="test01 Coverage Results" MODIFIED="1581167160082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/test$CrawlAllCityHistory.coverage" NAME="CrawlAllCityHistory Coverage Results" MODIFIED="1581168136215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
