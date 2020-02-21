@@ -1,0 +1,99 @@
+
+def cal_acc_confirm(I,R,D):
+    return (I+R+D).astype(np.int)
+
+def cal_new_confirm(I,R,D):
+    acc_confirm = cal_acc_confirm(I,R,D)
+    new_confirm = np.zeros((len(acc_confirm)-1))
+    for i in range(len(acc_confirm)-1):
+        new_confirm[i] = int(acc_confirm[i+1]-acc_confirm[i])
+    return new_confirm
+
+def cal_new_R(R):
+    new_R = np.zeros((len(R)-1))
+    for i in range(len(R)-1):
+        new_R[i] = np.ceil(R[i+1]-R[i])
+    return new_R
+def load_model_predict(model_city_date_path, data, param_pred=True, exp_decay=True, city_name='深圳',c='confirmed', features=['I','cured','dead'], return_new_C_R=False, pred_date_len=5):
+    I_name,recover_name,dead_name = features
+    model_pt = os.path.join(model_city_date_path,'model.pt')
+    model = torch.load(model_pt)
+    S = model.S_tensor_cur
+    E = model.E_tensor_cur
+    I = model.I_tensor_cur
+    R = model.R_tensor_cur
+    D = model.D_tensor_cur
+
+    I_pred_old_float = (I.detach().numpy())
+    R_pred_old_float = (R.detach().numpy())
+    D_pred_old_float = (D.detach().numpy())
+    S_pred_old_float = (S.detach().numpy())
+    E_pred_old_float = (E.detach().numpy())
+
+    I_pred_old = (I.detach().numpy()).astype(np.int)
+    R_pred_old = (R.detach().numpy()).astype(np.int)
+    D_pred_old = (D.detach().numpy()).astype(np.int)
+    S_pred_old = (S.detach().numpy()).astype(np.int)
+    E_pred_old = (E.detach().numpy()).astype(np.int)
+
+    confirm_pred = cal_acc_confirm(I_pred_old_float,R_pred_old_float,D_pred_old_float)
+    confirm_origin = get_data_acc_confirm(data,c=c)
+    # print(confirm_origin)
+    new_confirm = cal_new_confirm(np.array(data[I_name]),np.array(data[recover_name]),np.array(data[dead_name]))
+    new_confirm_pred = cal_new_confirm(I_pred_old_float,R_pred_old_float,D_pred_old_float)
+
+    if param_pred:
+        beta = []
+        theta = []
+        gamma_2 = []
+        alpha = []
+        for i in range(len(model.SEIR_cells)):
+            beta.append(model.SEIR_cells[i].beta.detach().numpy()[0])
+            gamma_2.append(model.SEIR_cells[i].gamma_2.detach().numpy()[0])
+            theta.append(model.SEIR_cells[i].theta.detach().numpy()[0])
+            alpha.append(model.SEIR_cells[i].alpha.detach().numpy()[0])
+        # if city_name=='深圳':
+        #     theta=get_recent_curve(theta)
+        # print(len(theta))
+        param = model.param_pred(beta,gamma_2,theta,alpha,exp_decay=exp_decay,pred_date_len=pred_date_len)
+
+        # print(param)
+        S_pred_tensor, I_pred_tensor, E_pred_tensor, R_pred_tensor, D_pred_tensor = model.pred(param=param, pred_date_len = pred_date_len)
+    else:
+        S_pred_tensor, I_pred_tensor, E_pred_tensor, R_pred_tensor, D_pred_tensor = model.pred(pred_date_len = pred_date_len)
+
+    I_pred_new_float = (I_pred_tensor.detach().numpy())
+    R_pred_new_float = (R_pred_tensor.detach().numpy())
+    D_pred_new_float = (D_pred_tensor.detach().numpy())
+    S_pred_new_float = (S_pred_tensor.detach().numpy())
+    E_pred_new_float = (E_pred_tensor.detach().numpy())
+
+    I_pred_new = (I_pred_tensor.detach().numpy()).astype(np.int)
+    R_pred_new = (R_pred_tensor.detach().numpy()).astype(np.int)
+    D_pred_new = (D_pred_tensor.detach().numpy()).astype(np.int)
+    S_pred_new = (S_pred_tensor.detach().numpy()).astype(np.int)
+    E_pred_new = (E_pred_tensor.detach().numpy()).astype(np.int)
+
+    I_pred_total = np.concatenate((I_pred_old_float,I_pred_new_float),axis=0)
+    R_pred_total = np.concatenate((R_pred_old_float,R_pred_new_float),axis=0)
+    D_pred_total = np.concatenate((D_pred_old_float,D_pred_new_float),axis=0)
+    S_pred_total = np.concatenate((S_pred_old_float,S_pred_new_float),axis=0)
+    E_pred_total = np.concatenate((E_pred_old_float,E_pred_new_float),axis=0)
+
+    plot_SEIRD(data, I=I_pred_total, R=R_pred_total, D=D_pred_total, city=city_name, pred_date_len=pred_date_len)
+
+    confirm_pred = cal_acc_confirm(I_pred_total,R_pred_total,D_pred_total)
+    confirm_origin = get_data_acc_confirm(data,c=c)
+    plot_daily_acc(data, confirm_origin, confirm_pred, city=city_name, pred_date_len=pred_date_len)
+    print("!!!!!!!!!!!!!!max_confirm_pred:",max(confirm_pred))
+    new_confirm_pred_total = cal_new_confirm(I_pred_total,R_pred_total,D_pred_total)
+    new_confirm_pred_total
+    plot_daily_new(data, new_confirm, new_confirm_pred_total, city=city_name, pred_date_len=pred_date_len)
+    new_R_pred_total = cal_new_R(R_pred_total)
+    # print(new_R_pred_total)
+
+    # print("!!!!!!\nN:\n",S_pred_total+E_pred_total+I_pred_total+R_pred_total+D_pred_total)
+    if return_new_C_R:
+        return model,new_confirm_pred_total,new_R_pred_total
+    else:
+        return model
