@@ -174,7 +174,8 @@
       <workItem from="1581993368187" duration="4670000" />
       <workItem from="1582078787795" duration="600000" />
       <workItem from="1582165418686" duration="4748000" />
-      <workItem from="1582250724889" duration="736000" />
+      <workItem from="1582250724889" duration="1423000" />
+      <workItem from="1582458657099" duration="3137000" />
     </task>
     <task id="LOCAL-00001" summary="update allcity_20200208.csv">
       <created>1581220676407</created>
@@ -234,10 +235,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="522" y="90" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581150700664" />
-    <state x="577" y="303" key="com.intellij.ide.util.TipDialog" timestamp="1581993398177">
+    <state x="577" y="303" key="com.intellij.ide.util.TipDialog" timestamp="1582458983160">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="577" y="303" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581993398177" />
+    <state x="577" y="303" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582458983160" />
     <state x="824" y="189" key="ftp.server.browser" timestamp="1581165178587">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
